@@ -1,0 +1,199 @@
+﻿/* 둘리의 초록빛과 만화책의 또렷한 선을 담은 공통 테마 */
+:root {
+    --ink: #254b3a;
+    --green: #79cf69;
+    --cream: #fffdf1;
+    --yellow: #ffe181;
+    --shadow: 5px 6px 0 #254b3a;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+    min-height: 100vh;
+    font-family: "Malgun Gothic", "맑은 고딕", sans-serif;
+    color: var(--ink);
+    line-height: 1.85;
+    background-color: #edf8df;
+    background-image: radial-gradient(#c5dfb6 1.5px, transparent 1.5px);
+    background-size: 22px 22px;
+}
+header {
+    position: relative;
+    overflow: hidden;
+    padding: 44px 20px 40px;
+    text-align: center;
+    background: radial-gradient(ellipse at 12% 12%, #fffef5 0 10%, transparent 10.5%),
+                radial-gradient(ellipse at 85% 22%, #fffef5 0 12%, transparent 12.5%), #bce9f4;
+    border-bottom: 3px solid var(--ink);
+}
+header::before {
+    content: "호이~ 호이!";
+    display: block;
+    width: max-content;
+    margin: 0 auto 14px;
+    padding: 2px 18px;
+    border: 2px solid var(--ink);
+    border-radius: 50% 50% 50% 10%;
+    background: var(--cream);
+    font-size: 14px;
+    font-weight: 700;
+    transform: rotate(-5deg);
+}
+header h1 {
+    position: relative;
+    font-size: clamp(28px, 5vw, 44px);
+    font-weight: 900;
+    letter-spacing: -.04em;
+    text-shadow: 2px 3px 0 #fffdf1;
+}
+nav {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    padding: 18px 20px 22px;
+    background: var(--cream);
+    border-bottom: 3px solid var(--ink);
+}
+nav a {
+    display: block;
+    min-width: 106px;
+    padding: 7px 24px;
+    border: 2px solid var(--ink);
+    border-radius: 14px;
+    background: var(--green);
+    box-shadow: 3px 3px 0 var(--ink);
+    color: var(--ink);
+    text-decoration: none;
+    text-align: center;
+    font-weight: 800;
+    transition: transform .18s, box-shadow .18s;
+}
+nav span:nth-child(2) a { background: #ffe181; }
+nav span:nth-child(3) a { background: #ffc0a5; }
+nav span:nth-child(4) a { background: #a9dfea; }
+nav a:hover { transform: translateY(-3px); box-shadow: 3px 6px 0 var(--ink); }
+nav a[aria-current="page"] { background: var(--ink); color: #fffdf1; }
+a:focus-visible { outline: 3px solid #cc4e26; outline-offset: 5px; }
+.content {
+    width: min(1120px, 92%);
+    margin: 36px auto 48px;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 28px;
+}
+.section1, aside {
+    border: 3px solid var(--ink);
+    border-radius: 24px;
+    box-shadow: var(--shadow);
+}
+.section1 { flex: 1; min-width: 0; padding: 30px; background: var(--cream); }
+.section1 h3 {
+    margin: 28px 0 18px;
+    padding: 0 0 10px;
+    border-bottom: 3px dashed #a6cc86;
+    font-size: 23px;
+}
+.section1 h3:first-child { margin-top: 0; }
+.section1 h3::before { content: "★"; color: #df8b25; margin-right: 9px; }
+.section1 p { line-height: 2; word-break: keep-all; overflow-wrap: anywhere; }
+.section1 ul { padding-left: 24px; }
+.section1 li { margin-bottom: 10px; overflow-wrap: anywhere; }
+.section1 li::marker { color: #42954a; }
+.section1::after { content: ""; display: block; clear: both; }
+img { max-width: 100%; height: auto; }
+#stu-pic {
+    float: left;
+    width: 210px;
+    height: 250px;
+    object-fit: contain;
+    margin: 0 24px 18px 0;
+    padding: 12px;
+    background: #e4f4cc;
+    border: 2px solid var(--ink);
+    border-radius: 24px;
+}
+#pic-container {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 12px;
+    margin: 24px 0 30px;
+}
+.semi-pic {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    padding: 6px;
+    border: 2px solid var(--ink);
+    border-radius: 14px;
+    background: #fff;
+}
+#logo {
+    display: block;
+    width: min(100%, 280px);
+    max-height: 190px;
+    object-fit: contain;
+    margin: 24px auto 0;
+    padding: 12px;
+    background: #fff;
+    border: 2px solid var(--ink);
+    border-radius: 18px;
+}
+video {
+    display: block;
+    width: 100%;
+    max-width: 680px;
+    max-height: 400px;
+    margin: 22px auto 28px;
+    border: 3px solid var(--ink);
+    border-radius: 16px;
+    background: #172c23;
+}
+#year-table { width: 100%; margin: 12px 0; border-collapse: collapse; font-size: 14px; }
+#year-table th, #year-table td { border: 2px solid #8eae78; padding: 10px 12px; text-align: left; }
+#year-table th { background: #dbefbc; }
+#year-table td { background: #fff; }
+aside { width: 100%; min-width: 0; display: flex; flex-wrap: wrap; justify-content: center; gap: 16px; padding: 24px 18px; background: #fff0b6; text-align: center; }
+aside h3 { width: 100%; margin-bottom: 4px; font-size: 21px; }
+aside a { display: block; width: fit-content; max-width: 100%; margin: 0; border-radius: 12px; }
+.portal {
+    display: block;
+    width: 164px;
+    height: 64px;
+    object-fit: contain;
+    padding: 10px;
+    background: #fff;
+    border: 2px solid var(--ink);
+    border-radius: 12px;
+    transition: transform .18s;
+}
+aside a:hover .portal { transform: rotate(-3deg); }
+footer { padding: 24px 18px; text-align: center; background: #b9df94; border-top: 3px solid var(--ink); }
+footer h2 { font-size: 13px; font-weight: 600; }
+@media (max-width: 800px) {
+    .content { flex-direction: column; gap: 24px; }
+    .section1, aside { width: 100%; }
+    aside { flex-basis: auto; display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; }
+    aside h3 { width: 100%; margin-bottom: 0; }
+    aside a { margin: 0; }
+}
+@media (max-width: 480px) {
+    header { padding: 28px 16px; }
+    nav { gap: 10px; padding: 14px 18px 18px; }
+    nav span { width: calc(50% - 5px); }
+    nav a { min-width: 0; padding: 7px 10px; }
+    .content { margin-top: 24px; }
+    .section1 { padding: 22px 18px; }
+    .section1 h3 { font-size: 20px; }
+    #stu-pic { float: none; display: block; width: 180px; height: 210px; margin: 0 auto 22px; }
+    #pic-container { grid-template-columns: 1fr; }
+    .semi-pic { height: auto; }
+    .portal { width: 126px; height: 56px; }
+    #year-table th, #year-table td { padding: 8px; }
+}
+@media (prefers-reduced-motion: reduce) {
+    nav a, .portal { transition: none; }
+}
+
+
